@@ -1,5 +1,5 @@
 from unittest import TestCase
-from main import ClassifierModel, classifier_processor
+from task_1 import ClassifierModel, classifier_processor
 
 
 class ClassifierTest(TestCase):
