@@ -1,4 +1,3 @@
-### https://www.notion.so/Python-developer-tasks-ed67435ad5314647849fbbe07ce9a029
 ## Task 1
 
 Дана модель:
@@ -12,20 +11,46 @@ class ClassifierModel(Model):
 
 Необходимо написать функцию, которая получив входные данные вида:
 
-[Untitled](https://www.notion.so/7a608a520a414b1682fa55f4d490a406)
-
+```
+input_data = [
+    {
+        'code': '1',
+        'name': 'name 1',
+    },
+    {
+        'code': '2',
+        'name': 'name 2',
+    },
+    {
+        'code': '1.1',
+        'name': 'name 1.1',
+    },
+    {
+        'code': '1.2',
+        'name': 'name 1.2',
+    },
+    {
+        'code': '1.2.1',
+        'name': 'name 1.2.1',
+    },
+    {
+        'code': '1.2.2',
+        'name': 'name 1.2.2',
+    },
+]
+```
 Вернёт структуру данных python вида:
 
 ```
 result = [
     {'code': '1', 'name': 'name 1', 'children': [
-        {'code': '1.1', 'children': []},
-        {'code': '1.2', 'name': 'name 1', 'children': [
+        {'code': '1.1', 'name': 'name 1.1', 'children': []},
+        {'code': '1.2', 'name': 'name 1.2', 'children': [
             {'code': '1.2.1', 'name': 'name 1.2.1', 'children': []},
             {'code': '1.2.2', 'name': 'name 1.2.2', 'children': []},
         ]}
     ]},
-    {'code': '2', 'name': 'name 1', 'children': []},
+    {'code': '2', 'name': 'name 2', 'children': []},
 ]
 
 ```
